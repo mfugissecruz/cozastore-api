@@ -1,0 +1,1 @@
+Começando aplicação da cazastore.
