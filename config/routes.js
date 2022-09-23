@@ -1,19 +1,13 @@
 const express = require('express')
 const routes = express.Router()
+const produtodata = require('../data/produtoData');
 
 
 
-routes.get('/home', (req, res) => {
-    return res.json(db)
-})
 
-routes.get('/cadastro', (req, res) => {
-    
-})
+routes.get('/product/:id', produtodata.findById);
 
-routes.get('/login', (req, res) => {
-    
-})
+
 
 
 module.exports = routes
