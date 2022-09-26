@@ -11,4 +11,15 @@ module.exports = {
       console.log(error);
     }
   },
+
+  async findProducts(req, res) {
+    try {
+      let response = await db.query(
+        `SELECT * FROM products WHERE pilot = TRUE`
+      );
+      res.json(response);
+    } catch (error) {
+      console.log(error);
+    }
+  },
 };

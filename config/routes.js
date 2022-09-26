@@ -4,4 +4,6 @@ const produtodata = require("../data/produtoData");
 
 routes.get("/product/:id", produtodata.findById);
 
+routes.get("/", produtodata.findProducts);
+
 module.exports = routes;
