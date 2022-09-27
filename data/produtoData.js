@@ -2,11 +2,11 @@ const db = require("./db");
 
 module.exports = {
   async findById(req, res) {
-    let id = req.params.id;
+    let slug = req.params.slug;
 
     try {
-      let response = await db.query(`SELECT * FROM products WHERE id = ${id}`);
-      res.json(response[0]);
+      let response = await db.query(`SELECT * FROM products WHERE slug = ${slug}`);
+      res.json(response);
     } catch (error) {
       console.log(error);
     }
