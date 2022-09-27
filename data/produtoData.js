@@ -5,7 +5,9 @@ module.exports = {
     let slug = req.params.slug;
 
     try {
-      let response = await db.query(`SELECT * FROM products WHERE slug = ${slug}`);
+      let response = await db.query(
+        `SELECT * FROM products WHERE slug = ${slug}`
+      );
       res.json(response);
     } catch (error) {
       console.log(error);

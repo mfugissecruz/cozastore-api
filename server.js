@@ -1,8 +1,10 @@
 const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors");
+const twilio = require("twilio");
 const bodyParser = require("body-parser");
 const routes = require("./config/routes");
+const port = 3030;
 
 const app = express();
 
@@ -12,6 +14,6 @@ app.use(express.json());
 app.use(cors());
 app.use(routes);
 
-app.listen(3030, () => {
-  console.log("Escutando na porta 3030");
+app.listen(port, () => {
+  console.log(`Escutando na porta ${port}`);
 });
